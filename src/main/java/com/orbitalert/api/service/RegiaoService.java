@@ -1,5 +1,6 @@
 package com.orbitalert.api.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import com.orbitalert.api.model.Regiao;
 import com.orbitalert.api.repository.RegiaoRepository;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ public class RegiaoService {
         this.repository = repository;
     }
 
+    @Cacheable("regioes")
     public List<Regiao> listarTodas() {
         return repository.findAll();
     }
