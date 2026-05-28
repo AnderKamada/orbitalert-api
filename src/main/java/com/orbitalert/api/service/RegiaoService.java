@@ -24,4 +24,7 @@ public class RegiaoService {
     public Regiao salvar(Regiao regiao) {
         return repository.save(regiao);
     }
+    public Regiao buscarPorId(Long id) {
+        return repository.findById(id).orElseThrow();
+    }
 }

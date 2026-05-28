@@ -25,4 +25,10 @@ public class RegiaoController {
     public Regiao salvar(@RequestBody Regiao regiao) {
         return service.salvar(regiao);
     }
+
+    @GetMapping("/{id}")
+    public Regiao buscarPorId(@PathVariable Long id) {
+
+        return service.buscarPorId(id);
+    }
 }
