@@ -42,6 +42,6 @@ public class RegiaoController {
                         "self", "/regioes/" + id,
                         "todas-regioes", "/regioes"
                 )
-        );
+        );// Health check endpoint para monitoramento
     }
 }
