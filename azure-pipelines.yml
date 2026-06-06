@@ -2,21 +2,31 @@ trigger:
   - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
+
+variables:
+  imageRepository: 'orbitalert-api'
+  containerRegistry: 'acr-orbitalert-conn'
+  dockerfilePath: 'dockerfiles/Dockerfile'
+  tag: '$(Build.BuildId)'
 
 steps:
 
   - task: Maven@4
     inputs:
       mavenPomFile: 'pom.xml'
-      goals: 'clean package'
-      publishJUnitResults: true
-      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      goals: 'clean package -DskipTests'
       javaHomeOption: 'JDKVersion'
       jdkVersionOption: '21'
 
-  - task: PublishBuildArtifacts@1
+  - task: Docker@2
+    displayName: Build and Push Image
     inputs:
-      PathtoPublish: 'target'
-      ArtifactName: 'orbitalert-api'
-      publishLocation: 'Container'
+      command: buildAndPush
+      repository: $(imageRepository)
+      dockerfile: $(dockerfilePath)
+      buildContext: '$(Build.SourcesDirectory)'
+      containerRegistry: $(containerRegistry)
+      tags: |
+        latest
+        $(tag)
