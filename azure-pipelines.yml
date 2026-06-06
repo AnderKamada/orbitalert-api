@@ -30,3 +30,14 @@ steps:
       tags: |
         latest
         $(tag)
+
+  - task: AzureCLI@2
+    displayName: Restart Container Instance
+    inputs:
+      azureSubscription: 'azure-orbitalert-conn'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az container restart \
+          --resource-group rg-orbitalert-dev \
+          --name orbitalert-api-container

@@ -42,6 +42,10 @@ public class RegiaoController {
                         "self", "/regioes/" + id,
                         "todas-regioes", "/regioes"
                 )
-        );// Health check endpoint para monitoramento
+        );
+    }
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "OrbitalAlert API Online";
     }
 }
