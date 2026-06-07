@@ -44,4 +44,8 @@ public class RegiaoController {
                 )
         );
     }
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "OrbitalAlert API Online";
+    }
 }
