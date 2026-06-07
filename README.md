@@ -33,6 +33,26 @@ O OrbitalAlert é uma plataforma baseada em Spring Boot que permite:
 * Implantação automatizada em nuvem Azure
 
 ---
+## Inteligência Artificial
+
+O projeto possui um microserviço de IA desenvolvido com Spring AI e Ollama.
+
+Repositório:
+
+https://github.com/AnderKamada/OrbitaLAlert-AI
+
+Foi desenvolvido um microserviço independente utilizando Spring AI e Ollama para análise de riscos climáticos.
+
+Tecnologias:
+
+- Spring AI
+- Ollama
+- Llama 3.2
+
+Endpoint:
+
+POST /ia/analisar
+--- 
 
 # Tecnologias Utilizadas
 
