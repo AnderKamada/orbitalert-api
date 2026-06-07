@@ -306,21 +306,21 @@ https://dev.azure.com/MR553449/OrbitalAlert/_build
 # Evidências
 
 * Azure Boards
-![boards](img.png)
+![boards](docs/evidencias/img.png)
 * Azure Repos
-![repos](img_1.png)
+![repos](docs/evidencias/img_1.png)
 * Azure Pipelines
-![pipelines](img_2.png)
+![pipelines](docs/evidencias/img_2.png)
 * Azure Container Registry
-![container-registry](img_3.png)
+![container-registry](docs/evidencias/img_3.png)
 * Azure Container Instance
-![instance-container](img_4.png)
+![instance-container](docs/evidencias/img_4.png)
 * Pull Request
-![pull-request](img_5.png)
+![pull-request](docs/evidencias/img_5.png)
 * Build executado com sucesso
-![build](img_6.png)
+![build](docs/evidencias/img_6.png)
 * Deploy executado com sucesso
-![restart](img_7.png)
+![restart](docs/evidencias/img_7.png)
 ---
 
 # Vídeo Demonstração
