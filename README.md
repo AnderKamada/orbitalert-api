@@ -68,8 +68,7 @@ O OrbitalAlert é uma plataforma baseada em Spring Boot que permite:
 
 # Arquitetura da Aplicação
 
-![Arquitetura-Java.drawio(1).png](../../Arquitetura-Java.drawio%281%29.png)
-
+![Arquitetura Aplicação](docs/arquitetura/arquitetura-java.png)
 ### Descrição
 
 A solução foi desenvolvida utilizando Spring Boot com autenticação JWT e arquitetura baseada em APIs REST.
@@ -82,7 +81,7 @@ Um microsserviço de alertas consome mensagens enviadas pela aplicação princip
 
 # Arquitetura DevOps
 
-![Arquitetura-DevOps.drawio.png](../../Arquitetura-DevOps.drawio.png)
+![Arquitetura DevOps](docs/arquitetura/arquitetura-devops.png)
 
 ### Descrição
 
